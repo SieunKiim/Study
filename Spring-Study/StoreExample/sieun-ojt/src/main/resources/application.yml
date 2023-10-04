@@ -1,0 +1,54 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto:  update
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+    open-in-view: false
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sieun_ojt?characterEncoding=UTF-8&serverTimezone=Asia/Seoul&autoReconnection=true&characterEncoding=UTF-8
+    username: root
+    password:
+  redis:
+    host: localhost
+    port: 6379
+
+logging:
+  level:
+    org.hibernate.type: trace
+
+exchange:
+  rate:
+    exchange: 1 # 환전 비율 (현금 -> 다이아몬드)
+    charge: 10 # 수수료
+
+pg:
+  kakao-pay:
+    admin-key: KakaoAK bb65209b384a00d921111c51f3d0c126
+    CID: TC0ONETIME
+    prepare: /v1/payment/ready
+    approve: /v1/payment/approve
+    cancel: /v1/payment/cancel
+    approval-url: http://localhost:8080/exchange/approve
+    cancel-url: http://localhost:8080/exchange/kakaopay/cancel
+    fail-url: http://localhost:8080/exchange/kakaopay/fail
+
+  payletter:
+    api-key-payment: PLKEY MTFBNTAzNTEwNDAxQUIyMjlCQzgwNTg1MkU4MkZENDA=
+    api-key-search: PLKEY MUI3MjM0RUExQTgyRDA1ODZGRDUyOEM4OTY2QTVCN0Y=
+    CID: pay_test
+    request: /v1.0/payments/request
+    cancel: /v1.0/payments/cancel
+    return-url : http://127.0.0.1:8080/exchange/payletter/test
+#    return-url : https://testpg.payletter.com/result
+#    call-back: http://localhost:8080/exchange/call-back
+    call-back: https://testpgapi.payletter.com/exchange/call-back
+
+config:
+  expire-period: 5
+
+
