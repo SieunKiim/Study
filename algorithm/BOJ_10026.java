@@ -18,7 +18,6 @@ public class BOJ_10026 {
             board[i] = br.readLine().toCharArray();
         }
 
-        // 1️⃣ 정상 시야 탐색
         visited = new boolean[N][N];
         int normalCount = 0;
         for (int i = 0; i < N; i++) {
@@ -30,7 +29,6 @@ public class BOJ_10026 {
             }
         }
 
-        // 2️⃣ 색맹 시야 탐색 (G → R로 통합)
         visited = new boolean[N][N];
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
@@ -53,7 +51,6 @@ public class BOJ_10026 {
         System.out.println(normalCount + " " + blindCount);
     }
 
-    // DFS 탐색
     static void dfs(int x, int y, char color) {
         visited[x][y] = true;
 
