@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 
 public class BOJ_16493 {
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         int n = Integer.parseInt(st.nextToken());
@@ -24,7 +24,7 @@ public class BOJ_16493 {
                 } else {
                     dp[i][j] = dp[i - 1][j];
                 }
-                
+
             }
         }
         System.out.println(dp[m][n]);
