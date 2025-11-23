@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Ch4. 처리율 제한 장치의 설계"
             }
+          },
+          {
+            "id": "69a62d742b150470",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.3"
+              },
+              "icon": "lucide-book-up",
+              "title": "릴리즈 노트 1.10.3"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -169,6 +182,6 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "c3ea573fbb1f7a6e",
+  "active": "69a62d742b150470",
   "lastOpenFiles": []
 }
