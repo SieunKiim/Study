@@ -32,9 +32,21 @@
               "icon": "lucide-book-up",
               "title": "릴리즈 노트 1.10.3"
             }
+          },
+          {
+            "id": "61b2f77998608068",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.6"
+              },
+              "icon": "lucide-book-up",
+              "title": "릴리즈 노트 1.10.6"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -182,6 +194,6 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "69a62d742b150470",
+  "active": "61b2f77998608068",
   "lastOpenFiles": []
 }
